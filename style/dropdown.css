@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap");
+
+
+.dropdown-sub:checked + label,
+.dropdown-sub:not(:checked) + label {
+  position: relative;
+  color: #000;
+  transition: all 200ms linear;
+  font-family: 'Delius', cursive;
+  font-weight: 500;
+  font-size: 15px;
+  padding: 5px 10px 5px 10px;
+  text-align: left;
+  text-decoration: none;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  justify-content: space-between;
+  -ms-flex-pack: distribute;
+  cursor: pointer;
+}
+
+.dropdown-sub:checked + label{
+    background-color: rgb(234, 200, 255);
+}
+
+.dropdown-sub:checked + label .bi,
+.dropdown-sub:not(:checked) + label .bi {
+  font-size: 22px;
+}
+.dropdown-sub:not(:checked) + label .bi {
+  transition: transform 200ms linear;
+}
+.dropdown-sub:checked + label .bi {
+  transform: rotate(135deg);
+  transition: transform 200ms linear;
+}
+.dropdown-sub:checked + label:hover,
+.dropdown-sub:not(:checked) + label:hover {
+  color: #1E1E47;
+  background-color:  rgb(234, 200, 255);
+}
+
+.section-dropdown{
+  user-select: none;
+}
+
+.section-dropdown-sub {
+  position: relative;
+  display: block;
+  pointer-events: none;
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 200ms linear;
+  user-select: none;
+}
+
+.dropdown-sub:checked ~ .section-dropdown-sub {
+  pointer-events: auto;
+  opacity: 1;
+  max-height: 999px;
+}
+
+.dropdown-item-2{
+    text-decoration: none;
+    font-family: 'Delius', cursive;
+    color: #000;
+    display: block;
+    padding: 5px 10px 5px 10px;
+    cursor: default;
+    transition: 200ms;
+}
+
+.section-dropdown-sub a {
+  padding-left: 17px;
+  font-size: 14px;
+}
+
+.section-dropdown-sub a:hover {
+  background-color: #dde4ed;
+  padding-left: 20px;
+  font-size: 14px;
+}
+.section-dropdown-sub a .bi {
+  font-size: 20px;
+}
